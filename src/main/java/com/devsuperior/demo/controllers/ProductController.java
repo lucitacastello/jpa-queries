@@ -17,8 +17,13 @@ public class ProductController {
 	@Autowired
 	private ProductRepository productRepository;
 	
+//	@GetMapping
+//	public List<Product> findAll() {
+//		return productRepository.findAll();
+//	}
+
 	@GetMapping
 	public List<Product> findAll() {
-		return productRepository.findAll();
+		return productRepository.searchAll();
 	}
 }

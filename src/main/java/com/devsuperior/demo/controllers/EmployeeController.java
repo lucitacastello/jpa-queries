@@ -14,11 +14,15 @@ import com.devsuperior.demo.repositories.EmployeeRepository;
 @RequestMapping(value = "/employees")
 public class EmployeeController {
 
-	@Autowired
-	private EmployeeRepository employeeRepository;
-	
-	@GetMapping
-	public List<Employee> findAll() {
-		return employeeRepository.findAll();
-	}
+    @Autowired
+    private EmployeeRepository employeeRepository;
+
+    //	@GetMapping
+//	public List<Employee> findAll() {
+//		return employeeRepository.findAll();
+//	}
+    @GetMapping
+    public List<Employee> findAll() {
+        return employeeRepository.searchAll();
+    }
 }
